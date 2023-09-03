@@ -1,0 +1,14 @@
+---
+import './NavbarLogo.scss';
+import { Image } from 'astro:assets';
+import LogoImage from '../../../../../public/logo.svg';
+---
+
+<div class="nav-logo">
+	<Image
+		src={LogoImage}
+		alt={'logo'}
+		height={200}
+		width={200}
+	/>
+</div>

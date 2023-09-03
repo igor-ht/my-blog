@@ -1,0 +1,17 @@
+@use "../../../../styles/main" as *;
+
+.recent-posts {
+  @include general-properties(auto, auto);
+  @include display-flex(column, center, center);
+  background-color: $secondColor;
+  h1 {
+    @include font($fontPoiretOne, 3.8rem, $color, center);
+  }
+  button {
+    @include general-properties(5rem, 2rem);
+    @include font($fontMontserrat, 1rem, $color, center);
+    background-color: $accentColor;
+    border-radius: 5px;
+    margin: 1rem;
+  }
+}

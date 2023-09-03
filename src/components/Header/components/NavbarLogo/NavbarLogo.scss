@@ -1,0 +1,16 @@
+@use "../../../../styles/main" as *;
+
+.nav-logo {
+  @include general-properties(auto, auto);
+  @include display-flex();
+
+  img {
+    @include image(6rem, auto, cover);
+    margin: 0.2rem 0.5rem;
+  }
+  @include media-query($media-md) {
+    img {
+      width: 4.5rem;
+    }
+  }
+}

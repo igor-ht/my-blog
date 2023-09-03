@@ -1,0 +1,13 @@
+{
+	"extends": "astro/tsconfigs/strict",
+	"typescript.inlayHints.parameterNames.enabled": "all",
+	"compilerOptions": {
+		"target": "ES6",
+		"strictNullChecks": true,
+		"jsx": "react-jsx",
+		"jsxImportSource": "react",
+		"paths": {
+			"@/*": ["./src/*"]
+		}
+	}
+}

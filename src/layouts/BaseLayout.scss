@@ -1,0 +1,6 @@
+@use "../styles/main" as *;
+
+#root {
+  @include display-flex(column, center, center);
+  background-color: $backgroundColor;
+}

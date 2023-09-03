@@ -1,0 +1,15 @@
+@use "../../styles/main" as *;
+
+.footer {
+  @include general-properties(100%, 100%);
+  @include display-flex(column, center, center);
+  @include font($fontMontserrat, 1.1rem, $color, center);
+  background-color: $backgroundColor;
+}
+
+.top-line {
+  @include general-properties(90%, 1.5px);
+  background-color: rgb(174, 174, 174);
+  border: 50%;
+  margin: 0.4rem 0 0.4rem 0;
+}

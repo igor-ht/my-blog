@@ -1,0 +1,29 @@
+@use "../../../../styles/main" as *;
+
+.toggle-theme {
+  @include display-flex(row, center, center);
+  margin: 0.2rem 0.5rem;
+}
+#themeToggle {
+  border: 0;
+  background: none;
+  svg {
+    width: 2rem;
+    @include media-query($media-md) {
+      width: 1.5rem;
+    }
+  }
+}
+.sun {
+  fill: black;
+}
+.moon {
+  fill: transparent;
+}
+
+:global(.dark) .sun {
+  fill: transparent;
+}
+:global(.dark) .moon {
+  fill: white;
+}

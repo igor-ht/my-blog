@@ -1,0 +1,32 @@
+@mixin general-properties($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin display-flex($flexDirection: row, $alignItems: flex-start, $justifyContent: flex-start) {
+  display: flex;
+  flex-direction: $flexDirection;
+  align-items: $alignItems;
+  justify-content: $justifyContent;
+}
+
+@mixin font($family, $size, $color, $textAlign: start) {
+  font-family: $family;
+  font-size: $size;
+  color: $color;
+  text-align: $textAlign;
+  text-decoration: none;
+}
+
+@mixin image($width, $height, $objectFit) {
+  width: $width;
+  height: $height;
+  object-fit: $objectFit;
+  user-select: none;
+}
+
+@mixin media-query($size) {
+  @media (max-width: $size) {
+    @content;
+  }
+}
