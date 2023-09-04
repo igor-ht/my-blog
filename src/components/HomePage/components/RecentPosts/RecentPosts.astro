@@ -1,9 +1,23 @@
 ---
 import './RecentPosts.scss';
+import Post from '../Post/Post.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog');
 ---
 
 <div class="recent-posts">
 	<h1>Recent Posts</h1>
+	{
+		posts.map((post) => {
+			return (
+				<Post
+					slug={post.slug}
+					data={post.data}
+				/>
+			);
+		})
+	}
 	<button
 		type="button"
 		class="btn-all-posts">

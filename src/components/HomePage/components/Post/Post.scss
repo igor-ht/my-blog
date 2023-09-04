@@ -1,0 +1,35 @@
+@use "../../../../styles/main" as *;
+
+.post-container {
+  @include general-properties(100%, auto);
+  @include display-flex(column);
+  .title-date {
+    @include general-properties(100%, auto);
+    @include display-flex(column, center, center);
+    h1 {
+      @include font($fontMontserrat, 2rem, $color, center);
+      max-width: 95%;
+      margin: 0.2rem 0 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    p {
+      @include font($fontMontserrat, 0.7rem, $color);
+      margin: 0 0.2rem 0 0;
+    }
+  }
+  .img-button {
+    @include general-properties(100%, auto);
+    @include display-flex(column, center, center);
+    img {
+      @include image(75%, auto, cover);
+    }
+    button {
+      @include general-properties(6rem, 2rem);
+      a {
+        @include font($fontMontserrat, 1rem, $color, center);
+      }
+    }
+  }
+}

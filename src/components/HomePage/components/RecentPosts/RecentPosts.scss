@@ -1,11 +1,12 @@
 @use "../../../../styles/main" as *;
 
 .recent-posts {
-  @include general-properties(auto, auto);
+  @include general-properties(90%, auto);
   @include display-flex(column, center, center);
   background-color: $secondColor;
   h1 {
     @include font($fontPoiretOne, 3.8rem, $color, center);
+    margin: 0.5rem;
   }
   button {
     @include general-properties(5rem, 2rem);

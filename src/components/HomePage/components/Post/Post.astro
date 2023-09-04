@@ -1,0 +1,35 @@
+---
+import { Image } from 'astro:assets';
+import './Post.scss';
+
+interface Props {
+	slug: string;
+	data: {
+		image: {
+			src: string;
+			alt: string;
+		};
+		title: string;
+		date: string;
+	};
+}
+
+const { data, slug } = Astro.props;
+const { title, date, image } = data;
+---
+
+<div class="post-container">
+	<span class="title-date">
+		<h1>{title}</h1>
+		<p>{date}</p>
+	</span>
+	<span class="img-button">
+		<Image
+			src={image.src}
+			alt={image.alt}
+			height={200}
+			width={200}
+		/>
+		<button type="button"><a href={`posts/${slug}`}>Read More</a></button>
+	</span>
+</div>
