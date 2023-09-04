@@ -9,7 +9,7 @@
 
 .top-line {
   @include general-properties(90%, 1.5px);
-  background-color: rgb(174, 174, 174);
+  background-color: $accentColor;
   border: 50%;
   margin: 0.4rem 0 0.4rem 0;
 }

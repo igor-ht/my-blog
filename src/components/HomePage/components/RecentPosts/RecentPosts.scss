@@ -3,10 +3,15 @@
 .recent-posts {
   @include general-properties(90%, auto);
   @include display-flex(column, center, center);
-  background-color: $secondColor;
+  
   h1 {
     @include font($fontPoiretOne, 3.8rem, $color, center);
     margin: 0.5rem;
+
+    @include media-query($media-md) {
+      font-size: 3rem;
+      margin: 0.3rem;
+    }
   }
   button {
     @include general-properties(5rem, 2rem);

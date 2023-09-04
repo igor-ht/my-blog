@@ -9,6 +9,7 @@
   background: none;
   svg {
     width: 2rem;
+    filter: invert(21%) sepia(14%) saturate(1429%) hue-rotate(201deg) brightness(92%) contrast(92%);
     @include media-query($media-md) {
       width: 1.5rem;
     }

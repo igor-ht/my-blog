@@ -1,35 +1,60 @@
 @use "../../../../styles/main" as *;
 
-.post-container {
+a {
+  @include font($fontMontserrat, 1rem, $color, center);
   @include general-properties(100%, auto);
+  @include display-flex(row, center, center);
+
+  &:hover {
+    transform: scale(1.01);
+  }
+}
+
+.post-container {
+  @include general-properties(95%, auto);
   @include display-flex(column);
+  border: 1px solid gray;
+  border-radius: 10px;
+  margin: 0.5rem 0 0.5rem 0;
+  box-shadow: 0px 0px 5px 0px rgb(73, 73, 73);
+
+  &:hover {
+    box-shadow: 0px 0px 10px 0px rgb(73, 73, 73);
+  }
+
   .title-date {
     @include general-properties(100%, auto);
-    @include display-flex(column, center, center);
+    background-color: $secondColor;
+    border-radius: 10px 10px 0 0;
+
     h1 {
-      @include font($fontMontserrat, 2rem, $color, center);
+      @include font($fontMontserrat, 1.8rem, $color, center);
       max-width: 95%;
-      margin: 0.2rem 0 0;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      margin: auto;
+      // white-space: nowrap;
+      // overflow: hidden;
+      // text-overflow: ellipsis;
     }
     p {
-      @include font($fontMontserrat, 0.7rem, $color);
-      margin: 0 0.2rem 0 0;
+      @include font($fontMontserrat, 0.6rem, $color, end);
+      margin: 0 1rem 0 0;
+    }
+    @include media-query($media-md) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      P {
+        font-size: 0.5rem;
+      }
     }
   }
-  .img-button {
+  .img {
     @include general-properties(100%, auto);
     @include display-flex(column, center, center);
+    border-radius: 0 0 10px 10px;
+
     img {
-      @include image(75%, auto, cover);
-    }
-    button {
-      @include general-properties(6rem, 2rem);
-      a {
-        @include font($fontMontserrat, 1rem, $color, center);
-      }
+      @include image(60%, auto, cover);
     }
   }
 }

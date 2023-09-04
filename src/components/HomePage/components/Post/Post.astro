@@ -18,18 +18,19 @@ const { data, slug } = Astro.props;
 const { title, date, image } = data;
 ---
 
-<div class="post-container">
-	<span class="title-date">
-		<h1>{title}</h1>
-		<p>{date}</p>
-	</span>
-	<span class="img-button">
-		<Image
-			src={image.src}
-			alt={image.alt}
-			height={200}
-			width={200}
-		/>
-		<button type="button"><a href={`posts/${slug}`}>Read More</a></button>
-	</span>
-</div>
+<a href={`posts/${slug}`}>
+	<div class="post-container">
+		<span class="title-date">
+			<h1>{title}</h1>
+			<p title="dd/mm/yyyy">{date}</p>
+		</span>
+		<span class="img">
+			<Image
+				src={image.src}
+				alt={image.alt}
+				height={200}
+				width={200}
+			/>
+		</span>
+	</div>
+</a>
