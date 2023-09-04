@@ -1,3 +1,3 @@
-#My Blog
+# My Blog
 
-###In Development using Astro.js
+### In Development using Astro.js
