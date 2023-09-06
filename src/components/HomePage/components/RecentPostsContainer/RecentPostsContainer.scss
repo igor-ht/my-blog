@@ -25,11 +25,11 @@
 
     &:hover {
       box-shadow: 0px 0px 10px 1px gray;
-      // background-color: darken-color($accentColor, 10%);
+      filter: brightness(0.8);
     }
     &:active {
       box-shadow: 0px 0px 15px 2px gray;
-      // background-color: darken-color($accentColor, 25%);
+      filter: brightness(0.5);
     }
   }
 }

@@ -1,6 +1,9 @@
 html,
 body {
   all: unset;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
 }
 body {
   isolation: isolate;
@@ -57,11 +60,6 @@ section {
 /* HTML5 hidden-attribute fix for newer browsers */
 *[hidden] {
   display: none;
-}
-
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
 }
 
 abbr {
