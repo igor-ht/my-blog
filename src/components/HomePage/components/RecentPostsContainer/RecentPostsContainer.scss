@@ -15,10 +15,21 @@
   }
 
   button {
-    @include general-properties(5rem, 2rem);
-    @include font($fontMontserrat, 1rem, $color, center);
+    @include general-properties(6rem, 2.2rem);
+    @include font($fontMontserrat, 1.2rem, $color, center);
+    font-weight: 600;
     background-color: $accentColor;
     border-radius: 5px;
     margin: 1rem;
+    box-shadow: 0px 0px 5px 1px gray;
+
+    &:hover {
+      box-shadow: 0px 0px 10px 1px gray;
+      background-color: darken-color($accentColor, 10%);
+    }
+    &:active {
+      box-shadow: 0px 0px 15px 2px gray;
+      background-color: darken-color($accentColor, 25%);
+    }
   }
 }

@@ -15,11 +15,11 @@ export async function getStaticPaths() {
 
 type Props = CollectionEntry<'blog'>;
 const post = Astro.props;
-// const { Content } = await post.render();
+const { Content } = await post.render();
 ---
 
 <BaseLayout>
-	<div transition:name={post.slug}>
+	<div class="post" transition:name={post.slug}>
 		<h1>{post.data.title}</h1>
 		<p>{post.data.date}</p>
 		<Image
@@ -28,5 +28,6 @@ const post = Astro.props;
 			height={200}
 			width={200}
 		/>
+		<Content />
 	</div>
 </BaseLayout>
