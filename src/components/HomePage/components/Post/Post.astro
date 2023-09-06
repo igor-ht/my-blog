@@ -18,13 +18,15 @@ const { data, slug } = Astro.props;
 const { title, date, image } = data;
 ---
 
-<a href={`posts/${slug}`}>
+<a
+	href={`posts/${slug}`}
+	transition:name={slug}>
 	<div class="post-container">
 		<span class="title-date">
 			<h1>{title}</h1>
 			<p title="dd/mm/yyyy">{date}</p>
 		</span>
-		<span class="img">
+		<span class="post-img">
 			<Image
 				src={image.src}
 				alt={image.alt}

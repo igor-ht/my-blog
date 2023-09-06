@@ -8,6 +8,7 @@
   a {
     @include font($fontPoiretOne, 1.8rem, $color, center);
     font-weight: 600;
+    flex: 1;
 
     &:hover,
     :active {
@@ -16,7 +17,7 @@
   }
 
   @include media-query($media-md) {
-    gap: 1rem;
+    gap: 0.3rem;
     a {
       font-size: 1.3rem;
     }

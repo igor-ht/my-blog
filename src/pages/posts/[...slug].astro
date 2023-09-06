@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('blog');
+	return posts.map((post) => {
+		return {
+			params: { slug: post.slug },
+			props: post,
+		};
+	});
+}
+
+type Props = CollectionEntry<'blog'>;
+const post = Astro.props;
+// const { Content } = await post.render();
+---
+
+<BaseLayout>
+	<div transition:name={post.slug}>
+		<h1>{post.data.title}</h1>
+		<p>{post.data.date}</p>
+		<Image
+			src={post.data.image.src}
+			alt={post.data.image.alt}
+			height={200}
+			width={200}
+		/>
+	</div>
+</BaseLayout>
