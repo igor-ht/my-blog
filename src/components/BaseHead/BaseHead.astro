@@ -6,7 +6,9 @@ const title = 'My Blog';
 const description = 'Welcome to my Blog. Here you will find posts about the adventures of a Junior Software Developer!';
 const image = '/logo-icon.svg';
 ---
+
 <!-- Global Metadata -->
+<ViewTransitions fallback="animate" />
 <meta charset="utf-8" />
 <meta
 	name="viewport"
@@ -81,5 +83,3 @@ const image = '/logo-icon.svg';
 	property="twitter:image"
 	content={new URL(image, Astro.url)}
 />
-
-<ViewTransitions fallback="animate" />
