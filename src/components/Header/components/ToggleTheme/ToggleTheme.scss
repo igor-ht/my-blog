@@ -9,7 +9,7 @@
   background: none;
   svg {
     width: 2rem;
-    filter: invert(21%) sepia(14%) saturate(1429%) hue-rotate(201deg) brightness(92%) contrast(92%);
+    filter: $svgFilter;
     @include media-query($media-md) {
       width: 1.5rem;
     }
@@ -20,11 +20,4 @@
 }
 .moon {
   fill: transparent;
-}
-
-:global(.dark) .sun {
-  fill: transparent;
-}
-:global(.dark) .moon {
-  fill: white;
 }

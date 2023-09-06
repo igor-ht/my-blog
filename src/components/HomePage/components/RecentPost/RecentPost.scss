@@ -27,12 +27,12 @@ a {
     position: relative;
 
     h1 {
-      @include font($fontMontserrat, 1.8rem, $color, center);
+      @include font($fontMontserrat, 1.8rem, #363654, center);
       max-width: 95%;
       margin: 0.5rem 0.5rem 0 0.5rem;
     }
     p {
-      @include font($fontMontserrat, 0.6rem, $color, end);
+      @include font($fontMontserrat, 0.6rem, #363654, end);
       margin: 0.2rem;
     }
     @include media-query($media-md) {

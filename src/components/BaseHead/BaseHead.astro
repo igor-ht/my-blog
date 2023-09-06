@@ -6,8 +6,6 @@ const title = 'My Blog';
 const description = 'Welcome to my Blog. Here you will find posts about the adventures of a Junior Software Developer!';
 const image = '/logo-icon.svg';
 ---
-
-<ViewTransitions fallback="animate" />
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta
@@ -23,22 +21,6 @@ const image = '/logo-icon.svg';
 	name="generator"
 	content={Astro.generator}
 />
-
-<!-- Font preloads -->
-<!-- <link
-	rel="preload"
-	href="/fonts/PoiretOne.ttf"
-	as="font"
-	type="font/ttf"
-	crossorigin
-/>
-<link
-	rel="preload"
-	href="/fonts/Montserrat.ttf"
-	as="font"
-	type="font/ttf"
-	crossorigin
-/> -->
 
 <!-- Canonical URL -->
 <link
@@ -56,7 +38,6 @@ const image = '/logo-icon.svg';
 	name="description"
 	content={description}
 />
-
 <!-- Open Graph / Facebook -->
 <meta
 	property="og:type"
@@ -100,3 +81,5 @@ const image = '/logo-icon.svg';
 	property="twitter:image"
 	content={new URL(image, Astro.url)}
 />
+
+<ViewTransitions fallback="animate" />

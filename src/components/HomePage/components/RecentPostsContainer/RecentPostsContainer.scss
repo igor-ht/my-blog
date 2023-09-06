@@ -16,7 +16,7 @@
 
   button {
     @include general-properties(6rem, 2.2rem);
-    @include font($fontMontserrat, 1.2rem, $color, center);
+    @include font($fontMontserrat, 1.2rem, #363654, center);
     font-weight: 600;
     background-color: $accentColor;
     border-radius: 5px;
@@ -25,11 +25,11 @@
 
     &:hover {
       box-shadow: 0px 0px 10px 1px gray;
-      background-color: darken-color($accentColor, 10%);
+      // background-color: darken-color($accentColor, 10%);
     }
     &:active {
       box-shadow: 0px 0px 15px 2px gray;
-      background-color: darken-color($accentColor, 25%);
+      // background-color: darken-color($accentColor, 25%);
     }
   }
 }

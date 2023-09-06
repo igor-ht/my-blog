@@ -1,2 +1,9 @@
+@charset "UTF-8";
+
+@forward "./global.scss";
+
 @forward "./abstract/index";
+
 @forward "./base/index";
+
+// @forward './component/index'
