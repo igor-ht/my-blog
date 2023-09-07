@@ -1,5 +1,3 @@
-@use "../../../../styles/main" as *;
-
 a {
   @include font($fontMontserrat, 1rem, $color, center);
   @include general-properties(100%, auto);

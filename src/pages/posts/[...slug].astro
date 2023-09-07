@@ -1,5 +1,5 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
 import { getCollection, type CollectionEntry } from 'astro:content';
 
@@ -19,7 +19,9 @@ const { Content } = await post.render();
 ---
 
 <BaseLayout>
-	<div class="post" transition:name={post.slug}>
+	<div
+		class="post"
+		transition:name={post.slug}>
 		<h1>{post.data.title}</h1>
 		<p>{post.data.date}</p>
 		<Image
