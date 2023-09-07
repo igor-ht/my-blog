@@ -7,8 +7,10 @@
 		"jsx": "react-jsx",
 		"jsxImportSource": "react",
 		"allowJs": true,
+		"baseUrl": ".",
 		"paths": {
-			"@/*": ["./src/*"]
+			"@*": ["src/*"],
+			"@styles/main": ["src/styles/_main.scss"]
 		}
 	}
 }

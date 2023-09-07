@@ -1,5 +1,4 @@
 let theme = (() => {
-	console.log('theme');
 	if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
 		return localStorage.getItem('theme');
 	}
@@ -14,7 +13,7 @@ document.documentElement.setAttribute('data-theme', theme || 'light');
 window.localStorage.setItem('theme', theme || 'light');
 
 const handleToggleClick = () => {
-	console.log('toggle theme');
+	console.log('handleToggleTheme fired');
 	const element = document.documentElement;
 	const currentTheme = element.getAttribute('data-theme');
 	if (currentTheme === 'light') {
@@ -26,4 +25,5 @@ const handleToggleClick = () => {
 	}
 };
 
-document.getElementById('themeToggle')?.addEventListener('click', handleToggleClick);
+const toggleThemeBtn = document.getElementById('themeToggle');
+toggleThemeBtn?.addEventListener('click', handleToggleClick);
