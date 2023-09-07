@@ -1,7 +1,3 @@
----
-import './ToggleTheme.scss';
----
-
 <div class="toggle-theme">
 	<button id="themeToggle">
 		<svg
@@ -22,32 +18,31 @@ import './ToggleTheme.scss';
 	</button>
 </div>
 
-<script>
-	const theme = (() => {
-		if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-			return localStorage.getItem('theme');
+<script src="./script.ts"></script>
+
+<style lang="scss">
+	@use '../../../../styles/main' as *;
+
+	.toggle-theme {
+		@include display-flex(row, center, center);
+		margin: 0.2rem 0.5rem;
+	}
+	#themeToggle {
+		border: 0;
+		background: none;
+		svg {
+			width: 2rem;
+			filter: $svgFilter;
+			@include media-query($media-md) {
+				width: 1.5rem;
+			}
 		}
-		if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-			return 'dark';
-		}
-		return 'light';
-	})();
+	}
 
-	document.documentElement.setAttribute('data-theme', theme || 'light');
-
-	window.localStorage.setItem('theme', theme || 'light');
-
-	const handleToggleClick = () => {
-		const element = document.documentElement;
-		const currentTheme = element.getAttribute('data-theme');
-		if (currentTheme === 'light') {
-			element.setAttribute('data-theme', 'dark');
-			localStorage.setItem('theme', 'dark');
-		} else {
-			element.setAttribute('data-theme', 'light');
-			localStorage.setItem('theme', 'light');
-		}
-	};
-
-	document.getElementById('themeToggle')?.addEventListener('click', handleToggleClick);
-</script>
+	.sun {
+		fill: black;
+	}
+	.moon {
+		fill: transparent;
+	}
+</style>

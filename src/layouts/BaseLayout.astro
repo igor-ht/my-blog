@@ -1,5 +1,4 @@
 ---
-import './BaseLayout.scss';
 import BaseHead from '../components/BaseHead/BaseHead.astro';
 import Footer from '../components/Footer/Footer.astro';
 import Header from '../components/Header/Header.astro';
@@ -13,26 +12,21 @@ import Header from '../components/Header/Header.astro';
 	<head>
 		<BaseHead />
 	</head>
+
 	<body id="root">
 		<Header />
 		<slot />
 		<Footer />
 
-		<script>
-			const setDarkMode = () => {
-				let currentTheme;
-				if (typeof localStorage !== 'undefined') {
-					currentTheme = localStorage.getItem('theme');
-				}
-				if (currentTheme === 'dark') {
-					document.documentElement.setAttribute('data-theme', 'dark');
-				}
-			};
+		<style lang="scss">
+			@use '../styles/main' as *;
 
-			// Runs on initial navigation
-			setDarkMode();
-			// Runs on view transitions navigation
-			document.addEventListener('astro:after-swap', setDarkMode);
-		</script>
+			#root {
+				@include display-flex(column, center, center);
+				background-color: $backgroundColor;
+			}
+		</style>
+
+		<script src="./script.ts"></script>
 	</body>
 </html>

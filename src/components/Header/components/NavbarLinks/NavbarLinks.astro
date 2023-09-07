@@ -1,9 +1,33 @@
----
-import './NavbarLinks.scss';
----
-
 <div class="nav-links">
 	<a href="/">Home</a>
 	<a href="/posts">Posts</a>
 	<a href="/contactme">Contact Me</a>
 </div>
+
+<style lang="scss">
+	@use '../../../../styles/main' as *;
+
+	.nav-links {
+		@include display-flex(row, center, center);
+		flex: 1;
+		gap: 2rem;
+
+		a {
+			@include font($fontPoiretOne, 1.8rem, $color, center);
+			font-weight: 600;
+			flex: 1;
+
+			&:hover,
+			:active {
+				text-decoration: underline;
+			}
+		}
+
+		@include media-query($media-md) {
+			gap: 0.3rem;
+			a {
+				font-size: 1.3rem;
+			}
+		}
+	}
+</style>

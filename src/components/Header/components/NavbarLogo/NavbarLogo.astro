@@ -1,14 +1,32 @@
 ---
-import './NavbarLogo.scss';
 import { Image } from 'astro:assets';
-import LogoImage from '/public/logo.svg';
 ---
 
 <div class="nav-logo">
 	<Image
-		src={LogoImage}
+		src={'/logo.svg'}
 		alt={'logo'}
 		height={200}
 		width={200}
 	/>
 </div>
+
+<style lang="scss">
+	@use '../../../../styles/main' as *;
+
+	.nav-logo {
+		@include general-properties(auto, auto);
+		@include display-flex();
+
+		img {
+			@include image(6rem, auto, cover);
+			margin: 0.2rem 0.5rem;
+			filter: $svgFilter;
+		}
+		@include media-query($media-md) {
+			img {
+				width: 4.5rem;
+			}
+		}
+	}
+</style>

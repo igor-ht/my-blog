@@ -1,8 +1,22 @@
----
-import './Footer.scss';
----
-
 <footer class="footer">
 	<div class="top-line"></div>
 	<p>&copy; 2023 iht - All rights reserved.</p>
 </footer>
+
+<style lang="scss">
+	@use '../../styles/main' as *;
+
+	.footer {
+		@include general-properties(100%, 100%);
+		@include display-flex(column, center, center);
+		@include font($fontMontserrat, 1.1rem, $color, center);
+		background-color: $backgroundColor;
+	}
+
+	.top-line {
+		@include general-properties(90%, 1.5px);
+		background-color: $accentColor;
+		border: 50%;
+		margin: 0.4rem 0 0.4rem 0;
+	}
+</style>
