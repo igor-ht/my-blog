@@ -14,8 +14,18 @@ import Main from './Main/Main.astro';
 
 <style lang="scss">
 	#root {
-		@include display-flex(column, center, center);
+		@include general-properties(100%, 100%);
+		@include display-flex(column, center);
 		background-color: $backgroundColor;
+		min-height: 100dvh;
 		transition: 200ms;
+
+		&::-webkit-scrollbar {
+			@include general-properties(0.5rem, auto);
+			background-color: $secondColor;
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: $accentColor;
+		}
 	}
 </style>
