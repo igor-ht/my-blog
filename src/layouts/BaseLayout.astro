@@ -1,7 +1,6 @@
 ---
 import BaseHead from 'src/components/common/BaseHead/BaseHead.astro';
-import Header from 'src/components/common/Header/Header.astro';
-import Footer from 'src/components/common/Footer/Footer.astro';
+import BaseBody from '@components/common/BaseBody/BaseBody.astro';
 ---
 
 <!doctype html>
@@ -9,22 +8,15 @@ import Footer from 'src/components/common/Footer/Footer.astro';
 	lang="en"
 	data-theme="light"
 	transition:animate="fade">
-	<head>
-		<BaseHead />
-	</head>
-
-	<body id="root">
-		<Header />
+	<BaseHead />
+	<BaseBody>
 		<slot />
-		<Footer />
 
 		<style lang="scss">
-			#root {
-				@include display-flex(column, center, center);
+			html {
 				background-color: $backgroundColor;
 			}
 		</style>
-
 		<script src="./script.ts"></script>
-	</body>
+	</BaseBody>
 </html>

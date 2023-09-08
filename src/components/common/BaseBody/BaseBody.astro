@@ -1,0 +1,21 @@
+---
+import Footer from './Footer/Footer.astro';
+import Header from './Header/Header.astro';
+import Main from './Main/Main.astro';
+---
+
+<body id="root">
+	<Header />
+	<Main>
+		<slot />
+	</Main>
+	<Footer />
+</body>
+
+<style lang="scss">
+	#root {
+		@include display-flex(column, center, center);
+		background-color: $backgroundColor;
+		transition: 200ms;
+	}
+</style>

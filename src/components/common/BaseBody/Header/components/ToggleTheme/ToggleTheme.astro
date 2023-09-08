@@ -29,6 +29,7 @@
 		svg {
 			width: 2rem;
 			filter: $svgFilter;
+			transition: 200ms;
 			@include media-query($media-md) {
 				width: 1.5rem;
 			}
@@ -40,6 +41,15 @@
 	}
 	.moon {
 		fill: transparent;
+	}
+	html[data-theme='dark'] {
+		.sun {
+			fill: transparent;
+		}
+		.moon {
+			fill: white;
+			filter: var(--svgFilter);
+		}
 	}
 </style>
 

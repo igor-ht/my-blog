@@ -11,12 +11,4 @@
 	--secondColor: #c8dbea;
 	--accentColor: #a5d1dd;
 	--svgFilter: invert(99%) sepia(0%) saturate(62%) hue-rotate(137deg) brightness(112%) contrast(89%);
-
-	.sun {
-		fill: transparent;
-	}
-	.moon {
-		fill: white;
-		filter: var(--svgFilter);
-	}
 }

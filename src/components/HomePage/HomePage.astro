@@ -1,8 +1,14 @@
 ---
-import './HomePage.scss';
 import RecentPostsContainer from './components/RecentPostsContainer/RecentPostsContainer.astro';
 ---
 
 <div class="home-page">
 	<RecentPostsContainer />
 </div>
+
+<style lang="scss">
+	.home-page {
+		@include general-properties(100%, auto);
+		@include display-flex(column, center, center);
+	}
+</style>
