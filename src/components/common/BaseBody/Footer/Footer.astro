@@ -5,7 +5,7 @@
 
 <style lang="scss">
 	.footer {
-		@include general-properties(100%, 10dvh);
+		@include general-properties(100%, auto);
 		@include display-flex(column, center);
 		@include font($fontMontserrat, 1.1rem, $color, center);
 		background-color: $backgroundColor;
@@ -16,9 +16,9 @@
 		@include general-properties(90%, 2px);
 		background-color: $accentColor;
 		border-radius: 50%;
-		margin: 1rem 0 0 0;
 	}
+
 	p {
-		margin: auto;
+		margin: 0.5rem 0 0.5rem 0;
 	}
 </style>
