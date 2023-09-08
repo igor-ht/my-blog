@@ -1,5 +1,4 @@
 ---
-import './RecentPostsContainer.scss';
 import RecentPost from '../RecentPost/RecentPost.astro';
 import { getCollection } from 'astro:content';
 
@@ -26,3 +25,39 @@ const posts = await getCollection('blog');
 		</button>
 	</a>
 </div>
+
+<style lang="scss">
+	.recent-posts {
+		@include general-properties(90%, auto);
+		@include display-flex(column, center, center);
+
+		h1 {
+			@include font($fontPoiretOne, 3.8rem, $color, center);
+			margin: 0.5rem;
+
+			@include media-query($media-md) {
+				font-size: 3rem;
+				margin: 0.3rem;
+			}
+		}
+
+		button {
+			@include general-properties(6rem, 2.2rem);
+			@include font($fontMontserrat, 1.2rem, #363654, center);
+			font-weight: 600;
+			background-color: $accentColor;
+			border-radius: 5px;
+			margin: 1rem;
+			box-shadow: 0px 0px 5px 1px gray;
+
+			&:hover {
+				box-shadow: 0px 0px 10px 1px gray;
+				filter: brightness(0.8);
+			}
+			&:active {
+				box-shadow: 0px 0px 15px 2px gray;
+				filter: brightness(0.5);
+			}
+		}
+	}
+</style>

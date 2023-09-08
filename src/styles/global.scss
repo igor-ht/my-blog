@@ -4,11 +4,12 @@
 	--secondColor: rgb(237, 241, 244);
 	--accentColor: rgb(125, 114, 221);
 	--svgFilter: invert(21%) sepia(14%) saturate(1429%) hue-rotate(201deg) brightness(92%) contrast(92%);
-}
-[data-theme="dark"] {
-	--color: #f1f1f1;
-	--backgroundColor: rgb(9, 7, 32);
-	--secondColor: #c8dbea;
-	--accentColor: #a5d1dd;
-	--svgFilter: invert(99%) sepia(0%) saturate(62%) hue-rotate(137deg) brightness(112%) contrast(89%);
+	
+	&[data-theme="dark"] {
+		--color: #f1f1f1;
+		--backgroundColor: rgb(9, 7, 32);
+		--secondColor: #c8dbea;
+		--accentColor: #a5d1dd;
+		--svgFilter: invert(99%) sepia(0%) saturate(62%) hue-rotate(137deg) brightness(112%) contrast(89%);
+	}
 }

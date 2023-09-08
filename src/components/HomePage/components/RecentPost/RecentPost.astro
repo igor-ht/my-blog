@@ -1,5 +1,4 @@
 ---
-import './RecentPost.scss';
 import { Image } from 'astro:assets';
 
 interface Props {
@@ -36,3 +35,63 @@ const { title, date, image } = data;
 		</span>
 	</div>
 </a>
+
+<style lang="scss">
+	a {
+		@include font($fontMontserrat, 1rem, $color, center);
+		@include general-properties(60%, auto);
+		margin: 0.5rem 0 0.5rem 0;
+		box-shadow: 0px 0px 5px 0px rgb(73, 73, 73);
+		border-radius: 10px;
+		transition: 200ms;
+
+		&:hover {
+			scale: 1.01;
+			box-shadow: 0px 0px 10px 0px rgb(73, 73, 73);
+		}
+
+		@include media-query($media-md) {
+			width: 100%;
+		}
+	}
+
+	.post-container {
+		@include display-flex(column);
+		border: 1px solid gray;
+		border-radius: 10px;
+
+		.title-date {
+			@include general-properties(100%, auto);
+			background-color: $secondColor;
+			border-radius: 10px 10px 0 0;
+			position: relative;
+
+			h1 {
+				@include font($fontMontserrat, 1.8rem, #363654, center);
+				max-width: 95%;
+				margin: 0.5rem 0.5rem 0 0.5rem;
+			}
+			p {
+				@include font($fontMontserrat, 0.6rem, #363654, end);
+				margin: 0.2rem;
+			}
+			@include media-query($media-md) {
+				h1 {
+					font-size: 1.5rem;
+				}
+				P {
+					font-size: 0.5rem;
+				}
+			}
+		}
+		.post-img {
+			@include general-properties(100%, auto);
+			@include display-flex(column, center, center);
+			border-radius: 0 0 10px 10px;
+
+			img {
+				@include image(30rem, auto, cover);
+			}
+		}
+	}
+</style>
