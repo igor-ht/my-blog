@@ -1,22 +1,23 @@
 ---
-import RecentPost from '../RecentPost/RecentPost.astro';
+import RecentPost from './RecentPost/RecentPost.astro';
 import { getCollection } from 'astro:content';
 
 const posts = await getCollection('blog');
 ---
 
-<div class="recent-posts">
-	<h1>Recent Posts</h1>
-	{
-		posts.map((post) => {
-			return (
-				<RecentPost
-					slug={post.slug}
-					data={post.data}
-				/>
-			);
-		})
-	}
+<div class="recent-posts-container">
+	<section>
+		{
+			posts.map((post) => {
+				return (
+					<RecentPost
+						slug={post.slug}
+						data={post.data}
+					/>
+				);
+			})
+		}
+	</section>
 	<a href="/blog">
 		<button
 			type="button"
@@ -27,22 +28,21 @@ const posts = await getCollection('blog');
 </div>
 
 <style lang="scss">
-	.recent-posts {
+	.recent-posts-container {
 		@include general-properties(90%, auto);
 		@include display-flex(column, center, center);
 
-		h1 {
-			@include font($fontPoiretOne, 3.5rem, $color, center);
-			margin: 0.5rem;
+		section {
+			@include display-flex(row, center, center);
+			gap: 1rem;
 
-			@include media-query($media-md) {
-				font-size: 3rem;
-				margin: 0.3rem;
+			@include media-query($media-lr) {
+				flex-direction: column;
 			}
 		}
 
 		button {
-			@include general-properties(6rem, 2.2rem);
+			@include general-properties(6rem, 2.5rem);
 			@include font($fontMontserrat, 1.2rem, #363654, center);
 			font-weight: 600;
 			background-color: $accentColor;

@@ -39,11 +39,14 @@ const { title, date, image } = data;
 <style lang="scss">
 	a {
 		@include font($fontMontserrat, 1rem, $color, center);
-		@include general-properties(60%, auto);
+		@include general-properties(75%, 25rem);
+		max-height: 25rem;
+		max-width: 35rem;
 		margin: 0.5rem 0 0.5rem 0;
 		box-shadow: 0px 0px 5px 0px rgb(73, 73, 73);
 		border-radius: 10px;
 		transition: 200ms;
+		overflow: hidden;
 
 		&:hover {
 			scale: 1.01;
@@ -57,11 +60,12 @@ const { title, date, image } = data;
 
 	.post-container {
 		@include display-flex(column);
-		border: 1px solid gray;
+		height: 100%;
 		border-radius: 10px;
 
 		.title-date {
 			@include general-properties(100%, auto);
+			min-height: 4rem;
 			background-color: $secondColor;
 			border-radius: 10px 10px 0 0;
 			position: relative;
@@ -86,9 +90,11 @@ const { title, date, image } = data;
 			}
 		}
 		.post-img {
-			@include general-properties(100%, auto);
+			@include general-properties(100%, 100%);
 			@include display-flex(column, center, center);
+			flex: 1;
 			border-radius: 0 0 10px 10px;
+			background-color: rgba(255, 255, 255, 0.589);
 
 			img {
 				@include image(30rem, auto, cover);
