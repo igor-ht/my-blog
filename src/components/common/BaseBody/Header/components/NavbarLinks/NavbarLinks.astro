@@ -1,7 +1,22 @@
 <div class="nav-links">
-	<a href="/"><p>Home</p></a>
-	<a href="/blog"><p>Blog</p></a>
-	<a href="/contactme"><p>Contact Me</p></a>
+	<a href="/">
+		<p>
+			<span>🔹</span>
+			 Home
+		</p>
+	</a>
+	<a href="/blog">
+		<p>
+			<span>🔹</span>
+			 Blog
+		</p>
+	</a>
+	<a href="/contactme">
+		<p>
+			<span>🔹</span>
+			 Contact Me
+		</p>
+	</a>
 </div>
 
 <style lang="scss">
@@ -15,9 +30,20 @@
 			font-weight: 600;
 			flex: 1;
 
+			p {
+				@include display-flex(row, center, center);
+			}
+
+			span {
+				@include font($fontEmoji, clamp(1rem, 2vw, 2rem), transparent, justify);
+			}
+
 			&:hover,
 			:active {
-				text-decoration: underline;
+				span {
+					text-decoration: none;
+					color: $color;
+				}
 			}
 		}
 
