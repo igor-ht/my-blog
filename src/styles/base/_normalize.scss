@@ -1,4 +1,7 @@
-
+html {
+  overflow: auto;
+  scrollbar-gutter: stable;
+}
 
 a {
   background-color: transparent;
@@ -53,7 +56,6 @@ textarea {
   margin: 0;
 }
 
-
 button,
 input {
   overflow: visible;
@@ -82,18 +84,15 @@ legend {
   white-space: normal;
 }
 
-
 [type="search"] {
   appearance: textfield;
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
 
-
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
-
 
 details {
   display: block;
