@@ -7,7 +7,6 @@
 	.footer {
 		@include general-properties(100%, auto);
 		@include display-flex(column, center);
-		@include font($fontMontserrat, 1.1rem, $color, center);
 		background-color: $backgroundColor;
 		transition: 200ms;
 	}
@@ -19,6 +18,7 @@
 	}
 
 	p {
+		@include font($fontMontserrat, clamp(1.1rem, 1.6vw, 5rem), $color, center);
 		margin: 0.5rem 0 0.5rem 0;
 		font-weight: 600;
 	}

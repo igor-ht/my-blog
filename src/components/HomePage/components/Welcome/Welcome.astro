@@ -9,10 +9,10 @@
 	<section class="introduction">
 		<span>🔹</span>
 		<p>
-			You just arrived at my blog, where I share my experiences and insights in the Software Development world as a Junior Developer. Here,
-			I write about my daily challenges and triumphs, from nice and interesting tips about coding to more personal thoughts and experiences.
-			It's about sharing personal insights and experiences that come with being a developer. So whether you're a fellow coder seeking
-			knowledge, a tech enthusiast, or just curious about this universe, you're in the right place.
+			You just arrived at my-blog, where I share my experiences and insights in the Software Development world as a Junior Developer. Here,
+			I write about my daily challenges, from nice and interesting tips about coding to more personal thoughts and experiences. It's about
+			sharing personal insights and experiences that come with being a developer. So whether you're a fellow coder seeking knowledge, a tech
+			enthusiast, or just curious about this universe, you're in the right place.
 		</p>
 		<span>🔹</span>
 	</section>
@@ -27,7 +27,7 @@
 			margin: 0.4rem 0 0.4rem 0;
 
 			h1 {
-				@include font($fontInconsolata, clamp(3rem, 6vw, 20rem), $color, center);
+				@include font($fontInconsolata, clamp(3rem, 4vw, 10rem), $color, center);
 				font-weight: bolder;
 				text-indent: 7px;
 				@include media-query($media-lr) {
@@ -40,15 +40,20 @@
 		}
 		.introduction {
 			@include display-flex(row, center, center);
+			margin: 0.4rem 0 0.4rem 0;
 			p {
-				@include font($fontInconsolata, clamp(1.2rem, 2vw, 10rem), $color, justify);
+				@include font($fontInconsolata, clamp(1.2rem, 1.5vw, 10rem), $color, justify);
 				max-width: 90%;
 				@include media-query($media-lr) {
-					font-size: clamp(1.2rem, 1vw, 10rem);
+					font-size: clamp(1.2rem, 2vw, 10rem);
 				}
 			}
 			span {
-				@include font($fontEmoji, clamp(1.5rem, 1.5rem, 3rem), $color, center);
+				@include font($fontEmoji, clamp(1.5rem, 1vw, 10rem), $color, center);
+
+				@include media-query($media-lr) {
+					font-size: 1.5rem;
+				}
 			}
 		}
 	}

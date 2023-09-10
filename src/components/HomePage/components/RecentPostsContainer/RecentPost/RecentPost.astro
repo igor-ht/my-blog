@@ -38,15 +38,14 @@ const { title, date, image } = data;
 
 <style lang="scss">
 	a {
-		@include font($fontMontserrat, 1rem, $color, center);
 		@include general-properties(75%, 25rem);
-		max-height: 25rem;
-		max-width: 35rem;
+		max-height: clamp(20rem, 15vw, 30rem);
 		margin: 0.5rem 0 0.5rem 0;
 		box-shadow: 0px 0px 5px 0px rgb(73, 73, 73);
 		border-radius: 10px;
 		transition: 200ms;
 		overflow: hidden;
+		text-decoration: none;
 
 		&:hover {
 			scale: 1.01;
@@ -66,7 +65,7 @@ const { title, date, image } = data;
 
 		.title-date {
 			@include general-properties(100%, auto);
-			min-height: 4rem;
+			min-height: 5rem;
 			background-color: $secondColor;
 			border-radius: 10px 10px 0 0;
 			position: relative;
@@ -101,7 +100,7 @@ const { title, date, image } = data;
 			background-color: rgba(255, 255, 255, 0.589);
 
 			img {
-				@include image(30rem, auto, cover);
+				@include image(clamp(15rem, 10vw, 30rem), auto, cover);
 			}
 		}
 	}
