@@ -34,7 +34,7 @@
 		border: 0;
 		background: none;
 		svg {
-			width: 2rem;
+			width: clamp(2rem, 2.5vw, 8rem);
 			filter: $svgFilter;
 			transition: 200ms;
 			@include media-query($media-md) {

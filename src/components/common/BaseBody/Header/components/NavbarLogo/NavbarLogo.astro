@@ -17,7 +17,7 @@ import { Image } from 'astro:assets';
 		@include display-flex(row, center, center);
 
 		img {
-			@include image(6rem, auto, cover);
+			@include image(clamp(6rem, 10vw, 15rem), auto, cover);
 			margin: 0.2rem 0.5rem;
 			filter: $svgFilter;
 		}

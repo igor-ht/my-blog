@@ -3,13 +3,53 @@
 ---
 
 <div class="welcome">
-	<h1>Welcome there</h1>
+	<section class="title">
+		<span>🔷</span><h1>Welcome there!</h1><span>🔷</span>
+	</section>
+	<section class="introduction">
+		<span>🔹</span>
+		<p>
+			You just arrived at my blog, where I share my experiences and insights in the Software Development world as a Junior Developer. Here,
+			I write about my daily challenges and triumphs, from nice and interesting tips about coding to more personal thoughts and experiences.
+			It's about sharing personal insights and experiences that come with being a developer. So whether you're a fellow coder seeking
+			knowledge, a tech enthusiast, or just curious about this universe, you're in the right place.
+		</p>
+		<span>🔹</span>
+	</section>
 </div>
 
 <style lang="scss">
 	.welcome {
-		h1 {
-			@include font($fontInconsolata, 2.5rem, $color, justify);
+		@include general-properties(90%, auto);
+		.title {
+			@include display-flex(row, center, center);
+			gap: 0.1rem;
+			margin: 0.4rem 0 0.4rem 0;
+
+			h1 {
+				@include font($fontInconsolata, clamp(3rem, 6vw, 20rem), $color, center);
+				font-weight: bolder;
+				text-indent: 7px;
+				@include media-query($media-lr) {
+					font-size: clamp(3rem, 4vw, 20rem);
+				}
+			}
+			span {
+				@include font($fontEmoji, clamp(0.8rem, 1vw, 2rem), $color, justify);
+			}
+		}
+		.introduction {
+			@include display-flex(row, center, center);
+			p {
+				@include font($fontInconsolata, clamp(1.2rem, 2vw, 10rem), $color, justify);
+				max-width: 90%;
+				@include media-query($media-lr) {
+					font-size: clamp(1.2rem, 1vw, 10rem);
+				}
+			}
+			span {
+				@include font($fontEmoji, clamp(1.5rem, 1.5rem, 3rem), $color, center);
+			}
 		}
 	}
 </style>
