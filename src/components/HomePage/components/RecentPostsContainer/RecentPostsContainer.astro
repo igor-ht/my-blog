@@ -44,25 +44,19 @@ const posts = await getCollection('blog');
 		}
 
 		button {
-			@include general-properties(11rem, 2.75rem);
-			@include font($fontInconsolata, 1.5rem, #363654, center);
+			@include font($fontMontserrat, clamp(1.8rem, 2.5vw, 2rem), $color, center);
 			font-weight: bolder;
-			background-color: $accentColor;
-			border-radius: 5px;
+			background-color: transparent;
 			margin: 1rem;
-			box-shadow: 0px 0px 5px 1px gray;
 
 			span {
-				@include font($fontEmoji, clamp(1rem, 2vw, 2rem), $color, justify);
+				@include font($fontEmoji, clamp(1.5rem, 2.5vw, 2rem), $color, justify);
 			}
-
 			&:hover {
-				box-shadow: 0px 0px 10px 1px gray;
-				filter: brightness(0.8);
+				scale: 1.1;
 			}
 			&:active {
-				box-shadow: 0px 0px 15px 2px gray;
-				filter: brightness(0.5);
+				scale: 1.15;
 			}
 		}
 	}

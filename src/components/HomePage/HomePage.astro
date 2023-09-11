@@ -15,9 +15,9 @@ import RecentPostsContainer from './components/RecentPostsContainer/RecentPostsC
 		@include display-flex(column, center);
 
 		h1 {
-			@include font($fontInconsolata, 3.5rem, $color, start);
-			margin: 3rem 0 1rem 0;
-			width: 80%;
+			@include font($fontInconsolata, clamp(2.8rem, 4vw, 10rem), $color, start);
+			margin: 3rem 0 0.5rem 0;
+			width: 81%;
 			font-weight: bolder;
 
 			@include media-query($media-md) {
