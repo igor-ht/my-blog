@@ -11,12 +11,13 @@ import RecentPostsContainer from './components/RecentPostsContainer/RecentPostsC
 
 <style lang="scss">
 	.home-page {
-		@include general-properties(100%, auto);
-		@include display-flex(column, center, center);
+		@include general-properties(90%, auto);
+		@include display-flex(column, center);
 
 		h1 {
-			@include font($fontPoiretOne, 3.5rem, $color, center);
-			margin: 0.5rem;
+			@include font($fontInconsolata, 3.5rem, $color, start);
+			margin: 3rem 0 1rem 0;
+			width: 80%;
 
 			@include media-query($media-md) {
 				font-size: 3rem;
