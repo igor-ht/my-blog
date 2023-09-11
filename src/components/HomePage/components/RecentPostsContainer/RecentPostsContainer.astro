@@ -23,6 +23,7 @@ const posts = await getCollection('blog');
 			type="button"
 			class="btn-all-posts">
 			All Posts
+			<span>➡</span>
 		</button>
 	</a>
 </div>
@@ -43,13 +44,17 @@ const posts = await getCollection('blog');
 		}
 
 		button {
-			@include general-properties(8rem, 2.75rem);
-			@include font($fontMontserrat, 1.5rem, #363654, center);
+			@include general-properties(11rem, 2.75rem);
+			@include font($fontInconsolata, 1.5rem, #363654, center);
 			font-weight: bolder;
 			background-color: $accentColor;
 			border-radius: 5px;
 			margin: 1rem;
 			box-shadow: 0px 0px 5px 1px gray;
+
+			span {
+				@include font($fontEmoji, clamp(1rem, 2vw, 2rem), $color, justify);
+			}
 
 			&:hover {
 				box-shadow: 0px 0px 10px 1px gray;

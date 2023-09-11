@@ -36,15 +36,16 @@
 
 			span {
 				@include font($fontEmoji, clamp(1rem, 2vw, 2rem), transparent, justify);
+				transform: translateX(8px) translateY(15px);
 				transition: 150ms;
-				margin-right: -8px;
 			}
 
 			&:hover,
 			:active {
 				span {
-					text-decoration: none;
 					color: $color;
+					transform: translateX(10px) translateY(0px);
+					text-decoration: none;
 				}
 			}
 		}
