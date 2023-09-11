@@ -59,5 +59,18 @@ const posts = await getCollection('blog');
 				scale: 1.15;
 			}
 		}
+
+		@include media-query($media-md) {
+			width: 100%;
+
+			section {
+				width: 100%;
+				gap: 0;
+			}
+
+			button {
+				margin: 1rem 0 0 0;
+			}
+		}
 	}
 </style>
