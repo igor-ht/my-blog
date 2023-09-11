@@ -5,6 +5,7 @@ import { getCollection } from 'astro:content';
 const posts = await getCollection('blog');
 ---
 
+<h1>Recent Posts</h1>
 <div class="recent-posts-container">
 	<section>
 		{
@@ -19,16 +20,48 @@ const posts = await getCollection('blog');
 		}
 	</section>
 	<a href="/blog">
-		<button
-			type="button"
-			class="btn-all-posts">
-			All Posts
-			<span>➡</span>
-		</button>
+		<p>All Posts</p>
+		<span>➡</span>
 	</a>
 </div>
 
 <style lang="scss">
+	@keyframes AllPostsAnimation {
+		0% {
+			transform: rotate(0deg) translateX(0) translateY(0);
+			scale: 1.1;
+		}
+		25% {
+			transform: rotate(15deg) translateX(3px) translateY(3px);
+			scale: 1;
+		}
+		50% {
+			transform: rotate(0deg) translateX(0) translateY(0);
+			scale: 1.1;
+		}
+		75% {
+			transform: rotate(-15deg) translateX(-3px) translateY(3px);
+			scale: 1;
+		}
+		100% {
+			transform: rotate(0) translateX(0) translateY(0);
+			scale: 1.1;
+		}
+	}
+
+	h1 {
+		@include font($fontInconsolata, clamp(2.8rem, 4vw, 10rem), $color, start);
+		margin: 3rem 0 0.5rem 0;
+		width: 81%;
+		font-weight: bolder;
+
+		@include media-query($media-md) {
+			font-size: 3rem;
+			margin: 0.3rem;
+			width: 100%;
+		}
+	}
+
 	.recent-posts-container {
 		@include general-properties(90%, auto);
 		@include display-flex(column, center, center);
@@ -43,17 +76,25 @@ const posts = await getCollection('blog');
 			}
 		}
 
-		button {
-			@include font($fontMontserrat, clamp(1.8rem, 2.5vw, 2rem), $color, center);
-			font-weight: bolder;
-			background-color: transparent;
+		a {
+			@include display-flex(row, center);
+			gap: 0.5rem;
 			margin: 1rem;
+			text-decoration: unset;
+
+			p {
+				@include font($fontMontserrat, clamp(1.8rem, 2vw, 2rem), $color, center);
+				font-weight: bolder;
+				text-decoration: underline;
+			}
 
 			span {
 				@include font($fontEmoji, clamp(1.5rem, 2.5vw, 2rem), $color, justify);
 			}
 			&:hover {
-				scale: 1.1;
+				span {
+					animation: AllPostsAnimation 1s linear infinite;
+				}
 			}
 			&:active {
 				scale: 1.15;

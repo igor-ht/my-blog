@@ -5,7 +5,6 @@ import RecentPostsContainer from './components/RecentPostsContainer/RecentPostsC
 
 <div class="home-page">
 	<Welcome />
-	<h1>Recent Posts</h1>
 	<RecentPostsContainer />
 </div>
 
@@ -13,18 +12,5 @@ import RecentPostsContainer from './components/RecentPostsContainer/RecentPostsC
 	.home-page {
 		@include general-properties(90%, auto);
 		@include display-flex(column, center);
-
-		h1 {
-			@include font($fontInconsolata, clamp(2.8rem, 4vw, 10rem), $color, start);
-			margin: 3rem 0 0.5rem 0;
-			width: 81%;
-			font-weight: bolder;
-
-			@include media-query($media-md) {
-				font-size: 3rem;
-				margin: 0.3rem;
-				width: 100%;
-			}
-		}
 	}
 </style>
