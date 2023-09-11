@@ -50,7 +50,7 @@ const posts = await getCollection('blog');
 	}
 
 	h1 {
-		@include font($fontInconsolata, clamp(2.8rem, 4vw, 10rem), $color, start);
+		@include font($fontInconsolata, clamp(2.8rem, 3vw, 6rem), $color, start);
 		margin: 3rem 0 0.5rem 0;
 		width: 81%;
 		font-weight: bolder;
@@ -83,7 +83,7 @@ const posts = await getCollection('blog');
 			text-decoration: unset;
 
 			p {
-				@include font($fontMontserrat, clamp(1.8rem, 2vw, 2rem), $color, center);
+				@include font($fontMontserrat, clamp(1.5rem, 2vw, 2rem), $color, center);
 				font-weight: bolder;
 				text-decoration: underline;
 			}
@@ -97,7 +97,7 @@ const posts = await getCollection('blog');
 				}
 			}
 			&:active {
-				scale: 1.15;
+				opacity: 0.8;
 			}
 		}
 
