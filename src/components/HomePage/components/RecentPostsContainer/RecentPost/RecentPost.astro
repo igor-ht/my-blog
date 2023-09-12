@@ -20,7 +20,7 @@ const { title, date, image } = data;
 <a
 	href={`blog/${slug}`}
 	transition:name={slug}>
-	<div class="post-container">
+	<article class="post-container">
 		<span class="title-date">
 			<h1>{title}</h1>
 			<p title="dd/mm/yyyy">{date}</p>
@@ -33,19 +33,17 @@ const { title, date, image } = data;
 				width={200}
 			/>
 		</span>
-	</div>
+	</article>
 </a>
 
 <style lang="scss">
 	a {
 		@include general-properties(75%, 25rem);
 		max-height: clamp(20rem, 15vw, 30rem);
-		margin: 0.5rem 0 0.5rem 0;
 		box-shadow: 0px 0px 5px 0px $color;
 		border-radius: 10px;
 		transition: 200ms;
 		overflow: hidden;
-		text-decoration: none;
 
 		&:hover {
 			scale: 1.01;

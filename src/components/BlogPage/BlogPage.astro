@@ -1,0 +1,40 @@
+---
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog');
+---
+
+<div class="all-posts">
+	{
+		posts.map((post) => {
+			return (
+				<a href={`/blog/${post.slug}`}>
+					<article>
+						<h1>&#x2022;{post.data.title}</h1>
+						<p>{post.data.date}</p>
+					</article>
+				</a>
+			);
+		})
+	}
+</div>
+
+<style lang="scss">
+	.all-posts {
+		@include display-flex(column);
+		min-height: 100%;
+		gap: 1rem;
+		margin: 1rem 0 1rem 0;
+	}
+	a {
+		article {
+			h1 {
+				@include font($fontMontserrat, 1.5rem, $color);
+				font-weight: bolder;
+			}
+			p {
+				@include font($fontInconsolata, 1rem, $color);
+			}
+		}
+	}
+</style>

@@ -5,11 +5,11 @@ html {
 
 a {
   background-color: transparent;
+  text-decoration: none;
 }
 
 abbr[title] {
   border-bottom: none;
-  text-decoration: underline;
   text-decoration: underline dotted;
 }
 
@@ -47,7 +47,6 @@ img {
 
 button,
 input,
-optgroup,
 select,
 textarea {
   font-family: inherit;
@@ -57,31 +56,13 @@ textarea {
 }
 
 button,
-input {
-  overflow: visible;
-}
-
-button,
-select {
-  text-transform: none;
-}
-
-button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
+  text-transform: none;
   appearance: button;
   -webkit-appearance: button;
   cursor: pointer;
-}
-
-legend {
-  box-sizing: border-box;
-  color: inherit;
-  display: table;
-  max-width: 100%;
-  padding: 0;
-  white-space: normal;
 }
 
 [type="search"] {
