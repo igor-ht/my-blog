@@ -98,7 +98,8 @@ const { title, date, image } = data;
 			background-color: rgba(255, 255, 255, 0.589);
 
 			img {
-				@include image(clamp(15rem, 10vw, 30rem), auto, cover);
+				@include image(100%, 100%, cover);
+				// clamp(15rem, 10vw, 30rem)
 			}
 		}
 	}

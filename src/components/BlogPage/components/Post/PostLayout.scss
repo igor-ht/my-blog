@@ -1,0 +1,38 @@
+.post {
+  @include general-properties(90%, 100%);
+  @include display-flex(column);
+  margin: 1rem 0 1rem 0;
+
+  .post-title {
+    @include font($fontMontserrat, clamp(2.8rem, 1.4vw, 5rem), $color, center);
+    font-weight: bolder;
+    margin: 1rem 0 1rem 0;
+  }
+  .post-date {
+    @include font($fontInconsolata, clamp(1rem, 0.5vw, 2.5rem), $color, center);
+  }
+
+  h2 {
+    @include font($fontMontserrat, clamp(2rem, 1vw, 3.5rem), $color, center);
+    font-weight: bolder;
+    margin: 2rem 0 0.5rem 0;
+  }
+
+  .post-img {
+    @include image(clamp(30rem, 15vw, 40rem), auto, cover);
+    margin: 0.5rem 0 0.5rem 0;
+    align-self: center;
+  }
+
+  p {
+    @include font($fontInconsolata, clamp(1.2rem, 0.6vw, 3rem), $color, justify);
+  }
+  span {
+    @include font($fontEmoji, clamp(2rem, 1.6vw, 5rem), $color, justify);
+  }
+
+  a {
+    color: $accentColor;
+    text-decoration: underline;
+  }
+}

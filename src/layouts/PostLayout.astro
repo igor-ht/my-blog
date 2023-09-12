@@ -1,0 +1,17 @@
+---
+import '@/components/BlogPage/components/Post/PostLayout.scss';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { type CollectionEntry } from 'astro:content';
+
+type Props = CollectionEntry<'blog'>;
+const post = Astro.props;
+const { Content } = await post.render();
+---
+
+<BaseLayout>
+	<div
+		class="post"
+		transition:name={post.slug}>
+		<Content />
+	</div>
+</BaseLayout>
