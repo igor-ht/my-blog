@@ -51,11 +51,11 @@ const { title, date } = data;
 
 			h1 {
 				@include display-flex(row, center);
-				@include font($fontMontserrat, clamp(1.2rem, 1vw, 3rem), #363654);
+				@include font($fontMontserrat, clamp(1.2rem, 1vw, 3rem), $color);
 				font-weight: 600;
 			}
 			p {
-				@include font($fontMontserrat, clamp(0.6rem, 0.5vw, 1rem), #363654, end);
+				@include font($fontMontserrat, clamp(0.6rem, 0.5vw, 1rem), $color, end);
 			}
 		}
 	}

@@ -5,8 +5,6 @@ image: { src: '/logo.svg', alt: 'logo' }
 slug: 'post1'
 ---
 
-# Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias sed iure eaque architecto recusandae accusantium sequi velit. Cupiditate mollitia laudantium nam cumque fugit esse, perspiciatis dolore dicta, nostrum neque quam!
-
 _Lorem_, **ipsum dolor sit amet** consectetur adipisicing elit. Asperiores at dolore accusantium recusandae animi totam, commodi laborum temporibus rem beatae saepe, fugiat dignissimos atque quisquam explicabo, blanditiis nisi nihil numquam.
 Voluptas amet harum soluta suscipit non aperiam doloribus a dolorum, fuga quas ducimus officiis assumenda modi in eveniet, aliquid minima, veniam quibusdam provident quia aut sint totam quisquam. Suscipit, perferendis!
 Ipsum eligendi impedit quos architecto iure, voluptatem a quam, minima ab enim, consequuntur voluptas. Illo sequi aliquam omnis, repellendus cumque ab dignissimos dolorum adipisci, officiis unde est delectus beatae alias.
