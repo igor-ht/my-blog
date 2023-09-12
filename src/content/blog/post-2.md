@@ -1,6 +1,6 @@
 ---
 title: 'Exploring the Magic of Static Site Generators'
-date: 03-AUG-2023
+date: August 03, 2023
 image: { src: 'https://www.datocms-assets.com/48401/1627662265-bestssg.png?fit%3Dmax%26fm%3Dwebp%26w%3D900', alt: 'SSG' }
 slug: 'post2'
 ---

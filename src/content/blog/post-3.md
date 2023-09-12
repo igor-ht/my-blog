@@ -1,6 +1,6 @@
 ---
 title: 'SQL vs. NoSQL Databases: Unraveling the differences and use cases'
-date: 03-AUG-2023
+date: July 15, 2023
 image: { src: 'https://media.geeksforgeeks.org/wp-content/cdn-uploads/20191104165821/SQL-Vs-NoSQL1.png', alt: 'SQL vs NoSQL' }
 slug: 'post3'
 ---
@@ -26,7 +26,7 @@ SQL databases are relational databases, which means they use a structured schema
 
 - **Examples**: MySQL, PostgreSQL, Oracle.
 
-### Use Cases for SQL Databases
+## Use Cases for SQL Databases
 
 1. **Complex Queries**: When your application requires complex querying and reporting capabilities, SQL databases shine. They are ideal for scenarios like financial applications and enterprise systems.
 
@@ -46,7 +46,7 @@ NoSQL databases, on the other hand, are non-relational and offer more flexibilit
 
 - **Examples**: MongoDB, Cassandra, Redis.
 
-### Use Cases for NoSQL Databases
+## Use Cases for NoSQL Databases
 
 1. **Scalability**: When you anticipate high data volumes and need to scale horizontally, NoSQL databases are the preferred choice. They distribute data across multiple servers seamlessly.
 
@@ -68,4 +68,4 @@ The choice between SQL and NoSQL databases depends on your project's specific re
 
 - **Project Size**: Smaller projects with limited data can benefit from SQL databases' simplicity, while larger, data-intensive projects may need NoSQL's scalability.
 
-In conclusion, SQL and NoSQL databases each have their strengths and use cases. The decision ultimately boils down to your project's unique needs. Choosing the right database model is a crucial step in ensuring your application's performance, scalability, and data management capabilities. 📊🔄
+In conclusion, SQL and NoSQL databases each have their strengths and use cases. The decision ultimately boils down to your project's unique needs. Choosing the right database model is a crucial step in ensuring your application's performance, scalability, and data management capabilities. <span>📊🔄</span>

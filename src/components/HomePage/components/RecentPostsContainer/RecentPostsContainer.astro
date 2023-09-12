@@ -5,7 +5,12 @@ import { getCollection } from 'astro:content';
 const posts = await getCollection('blog');
 ---
 
-<h1>Recent Posts</h1>
+<h1>
+	Latest Posts <a href="/blog">
+		<p>View All</p>
+		<span>➡</span>
+	</a>
+</h1>
 <div class="recent-posts-container">
 	<section>
 		{
@@ -19,10 +24,6 @@ const posts = await getCollection('blog');
 			})
 		}
 	</section>
-	<a href="/blog">
-		<p>All Posts</p>
-		<span>➡</span>
-	</a>
 </div>
 
 <style lang="scss">
@@ -50,31 +51,11 @@ const posts = await getCollection('blog');
 	}
 
 	h1 {
+		@include display-flex(row, center, space-between);
 		@include font($fontInconsolata, clamp(2.8rem, 3vw, 6rem), $color, start);
 		margin: 3rem 0 0.5rem 0;
 		width: 81%;
 		font-weight: bolder;
-
-		@include media-query($media-md) {
-			font-size: 3rem;
-			margin: 0.3rem;
-			width: 100%;
-		}
-	}
-
-	.recent-posts-container {
-		@include general-properties(90%, auto);
-		@include display-flex(column, center, center);
-
-		section {
-			@include general-properties(90%, auto);
-			@include display-flex(row, center, center);
-			gap: 1rem;
-
-			@include media-query($media-lr) {
-				flex-direction: column;
-			}
-		}
 
 		a {
 			@include display-flex(row, center);
@@ -84,7 +65,6 @@ const posts = await getCollection('blog');
 			p {
 				@include font($fontMontserrat, clamp(1.5rem, 2vw, 2rem), $color, center);
 				font-weight: bolder;
-				text-decoration: underline;
 			}
 
 			span {
@@ -101,15 +81,32 @@ const posts = await getCollection('blog');
 		}
 
 		@include media-query($media-md) {
+			font-size: 3rem;
+			margin: 0.3rem;
+			width: 100%;
+		}
+	}
+
+	.recent-posts-container {
+		@include general-properties(90%, auto);
+		@include display-flex(column, center, center);
+
+		section {
+			@include general-properties(90%, auto);
+			@include display-flex(column, normal, normal);
+			gap: 1rem;
+
+			@include media-query($media-lr) {
+				flex-direction: column;
+			}
+		}
+
+		@include media-query($media-md) {
 			width: 100%;
 
 			section {
 				width: 100%;
 				gap: 0;
-			}
-
-			button {
-				margin: 1rem 0 0 0;
 			}
 		}
 	}
