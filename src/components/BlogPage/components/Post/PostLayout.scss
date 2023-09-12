@@ -13,14 +13,14 @@
   }
 
   h2 {
-    @include font($fontMontserrat, clamp(2rem, 1vw, 3.5rem), $color, center);
+    @include font($fontMontserrat, clamp(2rem, 1vw, 3.5rem), $accentColor, center);
     font-weight: bolder;
     margin: 2rem 0 0.5rem 0;
   }
 
   .post-img {
-    @include image(clamp(30rem, 15vw, 40rem), auto, cover);
-    margin: 0.5rem 0 0.5rem 0;
+    @include image(clamp(35rem, 15vw, 90%), auto, cover);
+    padding: 1rem;
     align-self: center;
   }
 
@@ -34,5 +34,10 @@
   a {
     color: $accentColor;
     text-decoration: underline;
+  }
+
+  b,
+  strong {
+    color: $accentColor;
   }
 }
