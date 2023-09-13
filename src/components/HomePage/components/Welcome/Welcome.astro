@@ -1,10 +1,10 @@
 ---
-
+import Title from '../Title/Title.astro';
 ---
 
 <div class="welcome">
 	<section class="title">
-		<h1>Welcome there!</h1>
+		<Title title={'Welcome there!'} />
 	</section>
 	<section class="introduction">
 		<p>
@@ -19,22 +19,13 @@
 <style lang="scss">
 	.welcome {
 		@include general-properties(90%, auto);
-		@include display-flex(column, center, center);
+		@include display-flex(column);
 
 		.title {
 			@include display-flex(row, center);
 			width: 90%;
 			gap: 0.1rem;
 			margin: 3rem 0 0.3rem 0;
-
-			h1 {
-				@include font($fontInconsolata, clamp(2.8rem, 3vw, 6rem), $color, start);
-				font-weight: bolder;
-
-				@include media-query($media-lr) {
-					font-size: clamp(3rem, 4vw, 20rem);
-				}
-			}
 		}
 		.introduction {
 			@include display-flex(row, center, center);

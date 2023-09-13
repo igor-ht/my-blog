@@ -1,16 +1,17 @@
 ---
+import Title from '../Title/Title.astro';
 import RecentPost from './RecentPost/RecentPost.astro';
 import { getCollection } from 'astro:content';
 
 const posts = await getCollection('blog');
 ---
 
-<h1>
-	Latest Posts <a href="/blog">
+<Title title={'Latest Posts'}>
+	<a href="/blog">
 		<p>View All</p>
 		<span>➡</span>
 	</a>
-</h1>
+</Title>
 <div class="recent-posts-container">
 	<section>
 		{
@@ -49,50 +50,50 @@ const posts = await getCollection('blog');
 			scale: 1.1;
 		}
 	}
+	a {
+		@include display-flex(row, center);
+		gap: 0.5rem;
+		margin: 1rem;
 
-	h1 {
-		@include display-flex(row, center, space-between);
-		@include font($fontInconsolata, clamp(2.8rem, 3vw, 6rem), $color, start);
-		margin: 3rem 0 0.5rem 0;
-		width: 81%;
-		font-weight: bolder;
+		p {
+			@include font($fontMontserrat, clamp(1rem, 1vw, 2rem), transparent, center);
+			font-weight: bolder;
+			transform: translateX(80px);
+			opacity: 0;
+			transition: 200ms;
+		}
 
-		a {
-			@include display-flex(row, center);
-			gap: 0.5rem;
-			margin: 1rem;
-
-			p {
-				@include font($fontMontserrat, clamp(1rem, 1vw, 2rem), transparent, center);
-				font-weight: bolder;
-				transform: translateX(80px);
-				opacity: 0;
-				transition: 200ms;
-			}
-
+		span {
+			@include font($fontEmoji, clamp(1.5rem, 2.5vw, 2rem), $color, justify);
+			z-index: 1;
+		}
+		&:hover {
 			span {
-				@include font($fontEmoji, clamp(1.5rem, 2.5vw, 2rem), $color, justify);
-				z-index: 1;
+				animation: AllPostsAnimation 1s linear infinite;
 			}
-			&:hover {
-				span {
-					animation: AllPostsAnimation 1s linear infinite;
-				}
-				p {
-					color: $color;
-					transform: translateX(0);
-					opacity: 1;
-				}
+			p {
+				color: $color;
+				transform: translateX(0);
+				opacity: 1;
 			}
-			&:active {
-				opacity: 0.8;
-			}
+		}
+		&:active {
+			opacity: 0.8;
 		}
 
 		@include media-query($media-md) {
-			font-size: 3rem;
-			margin: 0.3rem;
-			width: 100%;
+			margin: 0;
+			gap: 0.2rem;
+
+			p {
+				font-size: clamp(0.8rem, 1vw, 1.5rem);
+				color: $color;
+				transform: translateX(0px);
+				opacity: 1;
+			}
+			span {
+				font-size: clamp(1rem, 1.5vw, 2rem);
+			}
 		}
 	}
 

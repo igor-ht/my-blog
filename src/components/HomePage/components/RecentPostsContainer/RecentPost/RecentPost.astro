@@ -57,6 +57,20 @@ const { title, date } = data;
 			p {
 				@include font($fontMontserrat, clamp(0.6rem, 0.5vw, 1rem), $color, end);
 			}
+
+			@include media-query($media-md) {
+				padding-bottom: 0.5rem;
+				padding-top: 0.5rem;
+
+				h1 {
+					font-size: clamp(1rem, 1vw, 2rem);
+				}
+
+				p {
+					font-size: clamp(0.7rem, 0.5vw, 1rem);
+					font-weight: bolder;
+				}
+			}
 		}
 	}
 </style>
