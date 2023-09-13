@@ -1,12 +1,12 @@
 ---
 title: 'Exploring the Magic of Static Site Generators'
-date: August 03, 2023
+date: August 20, 2023
 image: { src: 'https://www.datocms-assets.com/48401/1627662265-bestssg.png?fit%3Dmax%26fm%3Dwebp%26w%3D900', alt: 'SSG' }
 slug: 'post2'
 ---
 
 <h1 class="post-title">Exploring the Magic of Static Site Generators</h1>
-<p class="post-date">Posted at: 10/10/2023</p>
+<p class="post-date">Posted at: 20/09/2023</p>
 
 <img class="post-img" src="https://www.datocms-assets.com/48401/1627662265-bestssg.png?fit%3Dmax%26fm%3Dwebp%26w%3D900" alt="SSG" />
 

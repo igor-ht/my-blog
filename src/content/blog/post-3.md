@@ -1,12 +1,12 @@
 ---
 title: 'SQL vs. NoSQL Databases: Unraveling the differences and use cases'
-date: July 15, 2023
+date: October 15, 2023
 image: { src: 'https://media.geeksforgeeks.org/wp-content/cdn-uploads/20191104165821/SQL-Vs-NoSQL1.png', alt: 'SQL vs NoSQL' }
 slug: 'post3'
 ---
 
 <h1 class="post-title">SQL vs. NoSQL Databases: Unraveling the differences and use cases</h1>
-<p class="post-date">Posted at: 10/10/2023</p>
+<p class="post-date">Posted at: 15/10/2023</p>
 
 <img class="post-img" src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20191104165821/SQL-Vs-NoSQL1.png" alt="SQL vs NoSQL" />
 
