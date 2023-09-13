@@ -22,4 +22,4 @@ _In construction._
 
 ## Live App
 
-You can try the app live [here]().
+You can try the app live [here](https://iht-blog.vercel.app).
