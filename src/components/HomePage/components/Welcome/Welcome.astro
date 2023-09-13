@@ -3,9 +3,7 @@ import Title from '../Title/Title.astro';
 ---
 
 <div class="welcome">
-	<section class="title">
-		<Title title={'Welcome there!'} />
-	</section>
+	<Title title={'Welcome there!'} />
 	<section class="introduction">
 		<p>
 			You just arrived at <em>my-blog</em>, where I share my experiences and insights in the Software Development world as a Junior
@@ -18,18 +16,13 @@ import Title from '../Title/Title.astro';
 
 <style lang="scss">
 	.welcome {
-		@include general-properties(90%, auto);
-		@include display-flex(column);
+		@include display-flex(column, center, center);
+		flex: 1;
+		padding: 1rem 0;
 
-		.title {
-			@include display-flex(row, center);
-			width: 90%;
-			gap: 0.1rem;
-			margin: 3rem 0 0.3rem 0;
-		}
 		.introduction {
 			@include display-flex(row, center, center);
-			margin: 0.2rem 0 0.4rem 0;
+
 			p {
 				@include font($fontInconsolata, clamp(1.2rem, 1.5vw, 10rem), $color, justify);
 				max-width: 90%;
@@ -47,11 +40,6 @@ import Title from '../Title/Title.astro';
 
 		@include media-query($media-md) {
 			width: 100%;
-
-			.title {
-				width: auto;
-				margin: 1rem 0 1rem 0;
-			}
 
 			.introduction {
 				p {

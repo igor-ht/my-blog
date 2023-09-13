@@ -6,13 +6,13 @@ import { getCollection } from 'astro:content';
 const posts = await getCollection('blog');
 ---
 
-<Title title={'Latest Posts'}>
-	<a href="/blog">
-		<p>View All</p>
-		<span>➡</span>
-	</a>
-</Title>
 <div class="recent-posts-container">
+	<Title title={'Latest Posts'}>
+		<a href="/blog">
+			<p>View All</p>
+			<span>➡</span>
+		</a>
+	</Title>
 	<section>
 		{
 			posts.map((post) => {
@@ -50,56 +50,10 @@ const posts = await getCollection('blog');
 			scale: 1.1;
 		}
 	}
-	a {
-		@include display-flex(row, center);
-		gap: 0.5rem;
-		margin: 1rem;
-
-		p {
-			@include font($fontMontserrat, clamp(1rem, 1vw, 2rem), transparent, center);
-			font-weight: bolder;
-			transform: translateX(80px);
-			opacity: 0;
-			transition: 200ms;
-		}
-
-		span {
-			@include font($fontEmoji, clamp(1.5rem, 2.5vw, 2rem), $color, justify);
-			z-index: 1;
-		}
-		&:hover {
-			span {
-				animation: AllPostsAnimation 1s linear infinite;
-			}
-			p {
-				color: $color;
-				transform: translateX(0);
-				opacity: 1;
-			}
-		}
-		&:active {
-			opacity: 0.8;
-		}
-
-		@include media-query($media-md) {
-			margin: 0;
-			gap: 0.2rem;
-
-			p {
-				font-size: clamp(0.8rem, 1vw, 1.5rem);
-				color: $color;
-				transform: translateX(0px);
-				opacity: 1;
-			}
-			span {
-				font-size: clamp(1rem, 1.5vw, 2rem);
-			}
-		}
-	}
 
 	.recent-posts-container {
-		@include general-properties(90%, auto);
 		@include display-flex(column, center, center);
+		flex: 1;
 
 		section {
 			@include general-properties(90%, auto);
@@ -117,6 +71,52 @@ const posts = await getCollection('blog');
 			section {
 				width: 100%;
 				gap: 0;
+			}
+		}
+
+		a {
+			@include display-flex(row, center);
+			gap: 0.5rem;
+
+			p {
+				@include font($fontMontserrat, clamp(1rem, 1vw, 2rem), transparent, center);
+				font-weight: bolder;
+				transform: translateX(80px);
+				opacity: 0;
+				transition: 200ms;
+			}
+
+			span {
+				@include font($fontEmoji, clamp(1.5rem, 2.5vw, 2rem), $color, justify);
+				z-index: 1;
+			}
+			&:hover {
+				span {
+					animation: AllPostsAnimation 1s linear infinite;
+				}
+				p {
+					color: $color;
+					transform: translateX(0);
+					opacity: 1;
+				}
+			}
+			&:active {
+				opacity: 0.8;
+			}
+
+			@include media-query($media-md) {
+				margin: 0;
+				gap: 0.2rem;
+
+				p {
+					font-size: clamp(0.8rem, 1vw, 1.5rem);
+					color: $color;
+					transform: translateX(0px);
+					opacity: 1;
+				}
+				span {
+					font-size: clamp(1rem, 1.5vw, 2rem);
+				}
 			}
 		}
 	}
