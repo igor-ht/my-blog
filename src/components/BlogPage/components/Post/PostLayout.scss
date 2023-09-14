@@ -1,21 +1,32 @@
 .post {
   @include general-properties(90%, 100%);
   @include display-flex(column);
-  margin: 1rem 0 1rem 0;
+  margin: 1rem 0;
 
   .post-title {
-    @include font($fontMontserrat, clamp(2.8rem, 1.4vw, 5rem), $color, center);
+    @include font($fontMontserrat, clamp(2.8rem, 1.4vw, 5rem), $color);
     font-weight: bolder;
-    margin: 1rem 0 1rem 0;
+    margin: 1rem 0;
+    text-wrap: balance;
+
+    @include media-query($media-md) {
+      font-size: clamp(2rem, 1vw, 4rem);
+      margin: 0.5rem 0;
+    }
   }
   .post-date {
     @include font($fontInconsolata, clamp(1rem, 0.5vw, 2.5rem), $color, center);
   }
 
   h2 {
-    @include font($fontMontserrat, clamp(2rem, 1vw, 3.5rem), $accentColor, center);
+    @include font($fontMontserrat, clamp(2rem, 1vw, 3.5rem), $accentColor);
     font-weight: bolder;
     margin: 2rem 0 0.5rem 0;
+    text-wrap: balance;
+
+    @include media-query($media-md) {
+      font-size: clamp(1.5rem, 1.5vw, 2.5rem);
+    }
   }
 
   .post-img {
@@ -26,9 +37,34 @@
 
   p {
     @include font($fontInconsolata, clamp(1.2rem, 0.6vw, 3rem), $color, justify);
+    word-spacing: -2px;
   }
+  ul {
+    list-style: none;
+
+    @include media-query($media-md) {
+      padding-left: 0rem;
+    }
+    li {
+      @include display-flex(row);
+    }
+    li::before {
+      content: "\2022";
+      color: $accentColor;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      padding-right: 0.5em;
+    }
+  }
+
+  // span tags are only used to wrapp emojis to apply style
   span {
-    @include font($fontEmoji, clamp(2rem, 1.6vw, 5rem), $color, justify);
+    @include font($fontEmoji, clamp(2rem, 1.6vw, 4rem), $color);
+
+    @include media-query($media-md) {
+      font-size: clamp(1.5rem, 1.5vw, 2.5rem);
+    }
   }
 
   a {
