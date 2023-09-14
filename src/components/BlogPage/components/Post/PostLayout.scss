@@ -6,13 +6,14 @@
   .post-title {
     @include font($fontMontserrat, clamp(2.8rem, 1.4vw, 5rem), $color);
     font-weight: bolder;
-    margin: 1rem 0;
+    margin: 1rem 0 0;
     max-width: 90%;
     text-wrap: balance;
+    line-height: 1.2;
 
     @include media-query($media-md) {
       font-size: clamp(2rem, 1vw, 4rem);
-      margin: 0.5rem 0;
+      margin: 0.5rem 0 0;
       max-width: 100%;
     }
   }
@@ -31,6 +32,7 @@
     font-weight: bolder;
     margin: 2rem 0 0.5rem 0;
     text-wrap: balance;
+    line-height: 1.1;
 
     @include media-query($media-md) {
       font-size: clamp(1.5rem, 1.5vw, 2.5rem);
@@ -39,7 +41,9 @@
 
   p {
     @include font($fontInconsolata, clamp(1.2rem, 0.6vw, 3rem), $color, justify);
+    text-justify: inter-word;
     word-spacing: -2px;
+    line-height: 1.15;
   }
 
   ol {
