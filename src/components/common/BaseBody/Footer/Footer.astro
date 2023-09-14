@@ -1,5 +1,9 @@
+---
+import Line from '../../Line/Line.astro';
+---
+
 <footer class="footer">
-	<div class="top-line"></div>
+	<Line />
 	<p>&copy; 2023 iht - All rights reserved.</p>
 </footer>
 
@@ -10,11 +14,6 @@
 		background-color: $backgroundColor;
 		margin-top: 1rem;
 		transition: 200ms;
-	}
-
-	.top-line {
-		@include general-properties(90%, 2px);
-		background-color: $accentColor;
 	}
 
 	p {

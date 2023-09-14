@@ -2,19 +2,20 @@
 import NavbarLogo from './components/NavbarLogo/NavbarLogo.astro';
 import NavbarLinks from './components/NavbarLinks/NavbarLinks.astro';
 import ToggleTheme from './components/ToggleTheme/ToggleTheme.astro';
+import Line from '../../Line/Line.astro';
 ---
 
-<header class="header">
-	<nav class="navbar">
+<header>
+	<nav>
 		<NavbarLogo />
 		<NavbarLinks />
 		<ToggleTheme />
 	</nav>
-	<div class="bottom-line"></div>
+	<Line />
 </header>
 
 <style lang="scss">
-	.header {
+	header {
 		@include general-properties(100%, auto);
 		@include display-flex($flexDirection: column, $alignItems: center);
 		background-color: $backgroundColor;
@@ -25,7 +26,7 @@ import ToggleTheme from './components/ToggleTheme/ToggleTheme.astro';
 		}
 	}
 
-	.navbar {
+	nav {
 		@include general-properties(85%, auto);
 		@include display-flex($alignItems: center);
 		margin: 0.2rem 0 0;
@@ -42,11 +43,5 @@ import ToggleTheme from './components/ToggleTheme/ToggleTheme.astro';
 				flex: 1 2;
 			}
 		}
-	}
-
-	.bottom-line {
-		@include general-properties(90%, 1.5px);
-		background-color: $accentColor;
-		margin: 0.4rem 0 0.4rem 0;
 	}
 </style>
