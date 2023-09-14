@@ -42,20 +42,6 @@
     word-spacing: -2px;
   }
 
-  ul {
-    list-style: none;
-    li {
-      @include display-flex(row);
-      &::before {
-        content: "\2022";
-        color: $accentColor;
-        font-weight: bold;
-        display: inline-block;
-        width: 1em;
-        padding-right: 0.5em;
-      }
-    }
-  }
   ol {
     li::marker {
       @include font($fontInconsolata, inherit, $accentColor);

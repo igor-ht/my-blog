@@ -5,18 +5,22 @@ const posts = await getCollection('blog');
 ---
 
 <div class="all-posts">
-	{
-		posts.map((post) => {
-			return (
-				<a href={`/blog/${post.slug}`}>
-					<article>
-						<h1>&#x2022;{post.data.title}</h1>
-						<p>{post.data.date}</p>
-					</article>
-				</a>
-			);
-		})
-	}
+	<ul>
+		{
+			posts.map((post) => {
+				return (
+					<a href={`/blog/${post.slug}`}>
+						<li>
+							<article>
+								<h1>{post.data.title}</h1>
+								<p>{post.data.date}</p>
+							</article>
+						</li>
+					</a>
+				);
+			})
+		}
+	</ul>
 </div>
 
 <style lang="scss">
@@ -26,11 +30,16 @@ const posts = await getCollection('blog');
 		gap: 1rem;
 		margin: 1rem 0 1rem 0;
 	}
+
+	li {
+		margin: 1rem 0;
+	}
 	a {
 		article {
 			h1 {
 				@include font($fontMontserrat, 1.5rem, $color);
 				font-weight: bolder;
+				text-wrap: balance;
 			}
 			p {
 				@include font($fontInconsolata, 1rem, $color);
