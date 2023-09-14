@@ -1,11 +1,18 @@
 html,
 body {
   all: unset;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   overflow-x: hidden;
 }
+
 body {
   isolation: isolate;
 }
@@ -16,8 +23,6 @@ body {
   box-sizing: border-box;
 }
 
-html,
-body,
 div,
 span,
 h1,
@@ -31,7 +36,6 @@ u,
 i,
 form,
 label,
-abbr,
 footer,
 header,
 main,

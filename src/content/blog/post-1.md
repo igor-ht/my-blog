@@ -6,7 +6,7 @@ slug: 'post1'
 ---
 
 <h1 class="post-title">
-The Junior Developer Paradigm: <br>
+The Junior Developer Paradigm:<br>
 Navigating the Early Stages of Your Coding Journey</h1>
 <p class="post-date">Posted at: 04/07/2023</p>
 

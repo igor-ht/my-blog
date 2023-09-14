@@ -7,11 +7,13 @@
     @include font($fontMontserrat, clamp(2.8rem, 1.4vw, 5rem), $color);
     font-weight: bolder;
     margin: 1rem 0;
+    max-width: 90%;
     text-wrap: balance;
 
     @include media-query($media-md) {
       font-size: clamp(2rem, 1vw, 4rem);
       margin: 0.5rem 0;
+      max-width: 100%;
     }
   }
   .post-date {
@@ -39,34 +41,29 @@
     @include font($fontInconsolata, clamp(1.2rem, 0.6vw, 3rem), $color, justify);
     word-spacing: -2px;
   }
+
   ul {
     list-style: none;
-
-    @include media-query($media-md) {
-      padding-left: 0rem;
-    }
     li {
       @include display-flex(row);
-    }
-    li::before {
-      content: "\2022";
-      color: $accentColor;
-      font-weight: bold;
-      display: inline-block;
-      width: 1em;
-      padding-right: 0.5em;
+      &::before {
+        content: "\2022";
+        color: $accentColor;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        padding-right: 0.5em;
+      }
     }
   }
   ol {
-    padding-left: 1.5rem;
-
     li::marker {
-      @include font($fontInconsolata, clamp(1.2rem, 0.6vw, 3rem), $accentColor);
+      @include font($fontInconsolata, inherit, $accentColor);
       font-weight: bolder;
     }
   }
 
-  // span tags are only used to wrapp emojis to apply style
+  // span tags are only used to wrapp emojis
   span {
     @include font($fontEmoji, clamp(2rem, 1.6vw, 4rem), $color);
 

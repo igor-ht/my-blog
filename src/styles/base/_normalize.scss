@@ -3,14 +3,19 @@ html {
   scrollbar-gutter: stable;
 }
 
+ol {
+  padding-left: 1.5rem;
+  line-height: 1.15;
+}
+
+ul {
+  line-height: 1.15;
+  padding-left: 0;
+}
+
 a {
   background-color: transparent;
   text-decoration: none;
-}
-
-abbr[title] {
-  border-bottom: none;
-  text-decoration: underline dotted;
 }
 
 b,
@@ -18,9 +23,7 @@ strong {
   font-weight: bolder;
 }
 
-code,
-kbd,
-samp {
+code {
   font-family: monospace, monospace;
   font-size: 1em;
 }
