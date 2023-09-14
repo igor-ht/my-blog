@@ -37,6 +37,7 @@
 			span {
 				@include font($fontEmoji, clamp(1rem, 2vw, 2rem), transparent, justify);
 				transform: translateX(5px) translateY(15px);
+				opacity: 0;
 				transition: 150ms;
 			}
 
@@ -45,6 +46,7 @@
 				span {
 					color: $color;
 					transform: translateX(5px) translateY(0px);
+					opacity: 1;
 				}
 			}
 		}
