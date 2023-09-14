@@ -5,7 +5,9 @@ image: { src: 'https://atrium.ai/wp-content/uploads/2022/01/9-Career-Tips-For-A-
 slug: 'post1'
 ---
 
-<h1 class="post-title">The Junior Developer Paradigm: Navigating the Early Stages of Your Coding Journey</h1>
+<h1 class="post-title">
+The Junior Developer Paradigm: <br>
+Navigating the Early Stages of Your Coding Journey</h1>
 <p class="post-date">Posted at: 04/07/2023</p>
 
 <img class="post-img" src="https://atrium.ai/wp-content/uploads/2022/01/9-Career-Tips-For-A-Junior-Developer.jpg" alt="Junior Dev" />
@@ -13,8 +15,6 @@ slug: 'post1'
 Starting a career in software development can be both exciting and challenging. As a junior developer, you're at the beginning of a journey filled with opportunities for growth and learning. In this article, we'll explore the "Junior Developer Paradigm," highlighting key principles, strategies, and mindset shifts that can help you thrive in your early stages as a coder.
 
 ## Embrace the Learning Curve <span>📚</span>
-
-<!-- ![Learning Curve](https://images.unsplash.com/photo-1499951360443-4) -->
 
 One of the defining features of being a junior developer is the steep learning curve. Embrace it! The tech industry is constantly evolving, and there's always something new to learn. Here's how to make the most of it:
 
@@ -63,5 +63,3 @@ Becoming a proficient developer takes time. It's easy to feel overwhelmed, but r
 ## Conclusion
 
 The "Junior Developer Paradigm" is all about embracing the journey of growth, learning, and self-discovery. As a junior developer, you have a world of possibilities ahead of you. Stay curious, keep coding, and don't forget to enjoy the process. Your coding journey is an adventure, and each line of code you write brings you one step closer to your goals.
-
-<!-- ![Coding Journey](https://images.unsplash.com/photo-1544813544-14b415ccb7e8) -->
