@@ -19,5 +19,9 @@ const { title } = Astro.props;
 		@include media-query($media-lr) {
 			font-size: clamp(2.5rem, 2.8vw, 5rem);
 		}
+		@include media-query($media-md) {
+			width: 100%;
+			padding: 0;
+		}
 	}
 </style>
