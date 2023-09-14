@@ -36,6 +36,8 @@
 		svg {
 			width: clamp(2rem, 2.5vw, 8rem);
 			filter: $svgFilter;
+			fill: $svgFilter;
+			-webkit-text-fill-color: $svgFilter;
 			transition: 200ms;
 			@include media-query($media-md) {
 				width: 1.5rem;
