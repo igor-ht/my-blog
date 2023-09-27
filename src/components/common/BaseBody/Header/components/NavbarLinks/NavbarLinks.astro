@@ -1,21 +1,12 @@
 <div class="nav-links">
 	<a href="/">
-		<p>
-			<span>🔹</span>
-			 Home
-		</p>
+		<p>Home</p>
 	</a>
 	<a href="/blog">
-		<p>
-			<span>🔹</span>
-			 Blog
-		</p>
+		<p>Blog</p>
 	</a>
 	<a href="/contactme">
-		<p>
-			<span>🔹</span>
-			 Contact Me
-		</p>
+		<p>Contact Me</p>
 	</a>
 </div>
 
@@ -34,20 +25,9 @@
 				@include display-flex(row, center, center);
 			}
 
-			span {
-				@include font($fontEmoji, clamp(1rem, 2vw, 2rem), transparent, justify);
-				transform: translateX(5px) translateY(15px);
-				opacity: 0;
-				transition: 150ms;
-			}
-
 			&:hover,
 			:active {
-				span {
-					color: $color;
-					transform: translateX(5px) translateY(0px);
-					opacity: 1;
-				}
+				text-decoration: underline;
 			}
 		}
 
