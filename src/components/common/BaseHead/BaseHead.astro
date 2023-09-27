@@ -9,7 +9,6 @@ const image = '/logo-icon.svg';
 
 <!-- Global Metadata -->
 <head>
-	<ViewTransitions fallback="swap" />
 	<meta charset="utf-8" />
 	<meta
 		name="viewport"
@@ -84,4 +83,5 @@ const image = '/logo-icon.svg';
 		property="twitter:image"
 		content={new URL(image, Astro.url)}
 	/>
+	<ViewTransitions />
 </head>
