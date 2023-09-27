@@ -1,7 +1,7 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
 const title = 'My Blog';
 const description = 'Personal Blog by iht';
 const image = '/logo-icon.svg';

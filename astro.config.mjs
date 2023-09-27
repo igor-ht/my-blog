@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
-import sitemap from '@astrojs/sitemap';
-import vercel from '@astrojs/vercel/serverless';
 import { loadEnv } from 'vite';
+import sitemap from '@astrojs/sitemap';
+import vercelStatic from '@astrojs/vercel/static';
 
 const { SITE_URL, PRODUCTION } = loadEnv(process.env, process.cwd(), '');
 
@@ -18,8 +18,8 @@ export default defineConfig({
 			},
 		},
 	},
-	output: 'hybrid',
-	adapter: vercel({
+	output: 'static',
+	adapter: vercelStatic({
 		analytics: true,
 	}),
 });
